@@ -16,7 +16,7 @@ const Category = ({ params }) => {
         </div>
         <div className={styles.imgContainer}>
           <Image
-          fill={true}
+          // fill={true}
             className={styles.img}
             src="/hero.png"
             alt="image of a hosue"
