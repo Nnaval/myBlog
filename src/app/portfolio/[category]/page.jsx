@@ -19,7 +19,7 @@ const Category = ({ params }) => {
           fill={true}
             className={styles.img}
             src="/hero.png"
-            alt="image of a hosue"
+            alt="image of a land"
           />
         </div>
       </div>
