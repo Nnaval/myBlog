@@ -27,16 +27,17 @@ a{
   justify-content: space-between;
 }
 
-.theme{
-  transition: 1s all ease;
+.light {
+  background-color: white;
+  color: #111;
 }
 
 .dark {
-  background-color: #111;
+  background-color: #221818;
   color: #bbb;
-}
 
-.dark {
-  background-color: #111;
-  color: #bbb;
 }
+  .theme{
+    transition: 1s all ease;
+
+  }
