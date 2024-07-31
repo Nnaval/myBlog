@@ -4,6 +4,7 @@
 import { useEffect, useState } from "react";
 import styles from "./dashboard.module.css";
 import useSWR from "swr";
+import { useSession } from "next-auth/react";
 
 const dashboard = () => {
 
@@ -31,6 +32,10 @@ const dashboard = () => {
   //   getData();
   // }, []);
 
+  const session = useSession();
+
+  console.log(session);
+
   const fetcher = (...args) => fetch(...args).then(res => res.json())
 
   const { data, error, isLoading } = useSWR ("https://jsonplaceholder.typicode.com/posts", fetcher)
@@ -38,7 +43,7 @@ const dashboard = () => {
   if (error) return <div>Failed to load</div>
   if (isLoading) return <div>please wait....</div>
 
-  console.log('data=', data);
+  // console.log('data=', data);
   
   return (
     <div className={styles.title}>
