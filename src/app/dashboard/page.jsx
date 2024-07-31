@@ -32,7 +32,7 @@ const dashboard = () => {
   //   getData();
   // }, []);
 
-  const session = useSession();
+  const session = useSession(); 
 
   console.log(session);
 
