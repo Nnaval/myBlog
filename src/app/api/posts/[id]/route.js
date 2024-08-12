@@ -6,7 +6,7 @@ export const GET = async (request, {params} ) => {
 
     const { id } = params
   try {
-    console.log("mongodb not connected");
+    // console.log("mongodb not connected");
     await connectToDb();
 
     const postss = await post.findById(id);
@@ -16,3 +16,19 @@ export const GET = async (request, {params} ) => {
     return new NextResponse("failed to fetch posts", { status: 500 });
   }
 };
+
+export const DELETE = async (request, {params} ) => {
+
+  const { id } = params
+try {
+  // console.log("mongodb not connected");
+  await connectToDb();
+
+  await post.findByIdAndDelete(id);
+  return new NextResponse("post has been deleted", { status: 200 });
+  
+} catch (error) {
+  return new NextResponse("failed to fetch posts", { status: 500 });
+}
+};
+
